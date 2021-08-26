@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" text="css" href="../css/shop.css" />
+    <link rel="stylesheet" type="text/css" href="../css/navbar.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <div class="topnav">
+            <!-- <h1>Lam-Page</h1> -->
+            <div class="rightnav">
+                <a href="./home.html">Home</a>
+                <a class="active" href="./shop.html">Shop</a>
+                <a href="./blog.html">Blog</a>
+                <a href="./contact.html">Contact</a>
+                <a href="../Login.html">Signin</a>
+            </div>
+        </div>
+    </header>
+    <main>
+
+        <h1>Shop Checkbox</h1>
+        <p>ấn nút mua để biết được tổng số tiền</p>
+        <table style="width: 60%;" border="1px;">
+            <thead>
+                <tr>
+                    <th>Sản phẩm</th>
+                    <th>Đơn giá</th>
+                    <th>Môn học</th>
+                    <th>Số lượng</th>
+                    <th>Thanh Toán</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="padding-right:0%">
+                        <p class="name">
+                            <b>
+                                <label for="vehicle1"> Sách</label> <input type="checkbox" id="myCheck">
+                            </b>
+                        </p>
+
+                        <img src="../images/sach.jpg" style="height:100px; width:200px">
+                    </td>
+                    <td>
+                        <p style="margin-left:20px"> 20$ / cái</p>
+                    </td>
+                    <td>
+                        <select style="margin-left:20px">
+                            <option> Toán </option>
+                            <option> Lý </option>
+                            <option> Hóa </option>
+                            <option> Tin</option>
+                            <option>....</option>
+                        </select>
+                    </td>
+                    <td>
+                        <input style="margin-left:20px" type="number" id="quantity1" name="quantity" min="0"
+                            max="10">20$
+                    </td>
+                    <td>
+                        <button type="button" onclick="myFunction3()" style="boder=0px;">Mua</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p class="name">
+                            <b>
+                                <label for=" vehicle2"> Vở</label>
+                                <input type="checkbox" id="myCheck1">
+                            </b>
+                        </p>
+                        <img src="../images/vo.jpg" style="height:200px; width:200px">
+                    </td>
+                    <td>
+                        <p style="margin-left:20px"> 30$ / cái</p>
+                    </td>
+                    <td>
+                        <select style="margin-left:20px">
+                            <option> Toán </option>
+                            <option> Lý </option>
+                            <option> Hóa </option>
+                            <option> Tin</option>
+                            <option>....</option>
+                        </select>
+                    </td>
+                    <td>
+                        <input style="margin-left:20px" type="number" id="quantity2" name="quantity" min="0" max="10"
+                            value="số lượng">30$
+                    </td>
+                    <td>
+                        <p id="haha"></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p class="name">
+                            <b>
+                                <label for="vehicle3"> bút</label>
+                                <input type="checkbox" id="myCheck2">
+                            </b>
+                        </p>
+                        <img src="../images/but.jpg" style="height:200px; width:200px">
+                    </td>
+                    <td>
+                        <p style="margin-left:20px"> 40$ / cái</p>
+                    </td>
+                    <td>
+                        <select style="margin-left:20px">
+                            <option> Toán </option>
+                            <option> Lý </option>
+                            <option> Hóa </option>
+                            <option> Tin</option>
+                            <option>....</option>
+                        </select>
+                    </td>
+                    <td>
+                        <input style="margin-left:20px" type="number" id="quantity3" name="quantity" min="0" max="10"
+                            value="số lượng">40$
+                    </td>
+                </tr>
+
+            </tbody>
+            <thead>
+                <tr>
+                    <th><button onclick="myFunction(), myFunction1(), myFunction2()">Chọn tất cả</button></th>
+
+                    <td></td>
+                    <td></td>
+
+                </tr>
+            </thead>
+        </table>
+        <p>ấn nút mua để biết được tổng số tiền</p>
+        <h1 id="haha">Tổng tiền: 0</h1>
+        <!-- <p id="haha">0</p> -->
+    </main>
+    <footer>
+
+    </footer>
+</body>
+<script>
+    function myFunction() {
+        var x = document.getElementById("myCheck");
+        x.checked = true;
+    }
+    function myFunction1() {
+        var x = document.getElementById("myCheck1");
+        x.checked = true;
+    }
+    function myFunction2() {
+        var x = document.getElementById("myCheck2");
+        x.checked = true;
+        // print("x")
+    }
+    function myFunction3() {
+        var s = 0;
+        var x = document.getElementById("quantity1").value;
+        var y = document.getElementById("quantity2").value;
+        var z = document.getElementById("quantity3").value;
+        s += x * 20;
+        s += y * 30;
+        s += z * 40;
+        document.getElementById("haha").innerHTML = "Tổng tiền:" + ' ' + s;
+    }
+</script>
+
+</html>

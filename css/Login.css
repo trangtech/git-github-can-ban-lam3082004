@@ -86,10 +86,9 @@
 
         .anhnen {
             position: absolute;
-            left: 100px;
-            top: 100px;
-            height: 400px;
-            padding-top: 60px;
+            left: 20px;
+            height: 100px;
+            /* padding-top: 60px; */
         }
 
         .login-locate {
